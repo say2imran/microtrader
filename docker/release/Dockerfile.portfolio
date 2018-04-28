@@ -1,5 +1,5 @@
 FROM dockerproductionaws/microtrader-base
-MAINTAINER Justin Menga <justin.menga@gmail.com>
+MAINTAINER imran <say2imran@gmail.com>
 LABEL application.component=microtrader-portfolio
 
 # Copy application artefacts

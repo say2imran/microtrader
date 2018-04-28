@@ -1,4 +1,5 @@
-FROM dockerproductionaws/microtrader-base
+FROM 455344166605.dkr.ecr.ap-southeast-1.amazonaws.com/imz-ecr-registry/microtrader-base
+
 MAINTAINER Justin Menga <justin.menga@gmail.com>
 LABEL application.component=microtrader-dashboard
 HEALTHCHECK --interval=3s --retries=20 CMD curl -fs http://localhost:${HTTP_PORT:-8000}/
@@ -7,4 +8,3 @@ HEALTHCHECK --interval=3s --retries=20 CMD curl -fs http://localhost:${HTTP_PORT
 ARG app_version
 LABEL application.version=${app_version}
 COPY build/jars/microtrader-dashboard-${app_version}-fat.jar /app/app.jar
-
